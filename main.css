@@ -1,0 +1,536 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* The animation code */
+
+/* the counter animation */
+@keyframes counter {
+  0% {
+    counter-increment: count 0;
+  }
+
+  1.06% {
+    counter-increment: count 1;
+  }
+
+  2.13% {
+    counter-increment: count 2;
+  }
+
+  3.19% {
+    counter-increment: count 3;
+  }
+
+  4.25% {
+    counter-increment: count 4;
+  }
+
+  5.31% {
+    counter-increment: count 5;
+  }
+
+  6.38% {
+    counter-increment: count 6;
+  }
+
+  7.44% {
+    counter-increment: count 7;
+  }
+
+  8.5% {
+    counter-increment: count 8;
+  }
+
+  9.56% {
+    counter-increment: count 9;
+  }
+
+  10.63% {
+    counter-increment: count 10;
+  }
+
+  11.69% {
+    counter-increment: count 11;
+  }
+
+  12.75% {
+    counter-increment: count 12;
+  }
+
+  13.81% {
+    counter-increment: count 13;
+  }
+
+  14.88% {
+    counter-increment: count 14;
+  }
+
+  15.94% {
+    counter-increment: count 15;
+  }
+
+  17% {
+    counter-increment: count 16;
+  }
+
+  18.06% {
+    counter-increment: count 17;
+  }
+
+  19.13% {
+    counter-increment: count 18;
+  }
+
+  20.19% {
+    counter-increment: count 19;
+  }
+
+  21.25% {
+    counter-increment: count 20;
+  }
+
+  22.32% {
+    counter-increment: count 21;
+  }
+
+  23.38% {
+    counter-increment: count 22;
+  }
+
+  24.44% {
+    counter-increment: count 23;
+  }
+
+  25.5% {
+    counter-increment: count 24;
+  }
+
+  26.57% {
+    counter-increment: count 25;
+  }
+
+  27.63% {
+    counter-increment: count 26;
+  }
+
+  28.69% {
+    counter-increment: count 27;
+  }
+
+  29.75% {
+    counter-increment: count 28;
+  }
+
+  30.82% {
+    counter-increment: count 29;
+  }
+
+  31.88% {
+    counter-increment: count 30;
+  }
+
+  32.94% {
+    counter-increment: count 31;
+  }
+
+  34% {
+    counter-increment: count 32;
+  }
+
+  35.07% {
+    counter-increment: count 33;
+  }
+
+  36.13% {
+    counter-increment: count 34;
+  }
+
+  37.19% {
+    counter-increment: count 35;
+  }
+
+  38.25% {
+    counter-increment: count 36;
+  }
+
+  39.32% {
+    counter-increment: count 37;
+  }
+
+  40.38% {
+    counter-increment: count 38;
+  }
+
+  41.44% {
+    counter-increment: count 39;
+  }
+
+  42.51% {
+    counter-increment: count 40;
+  }
+
+  43.57% {
+    counter-increment: count 41;
+  }
+
+  44.63% {
+    counter-increment: count 42;
+  }
+
+  45.69% {
+    counter-increment: count 43;
+  }
+
+  46.76% {
+    counter-increment: count 44;
+  }
+
+  47.82% {
+    counter-increment: count 45;
+  }
+
+  48.88% {
+    counter-increment: count 46;
+  }
+
+  49.94% {
+    counter-increment: count 47;
+  }
+
+  51.01% {
+    counter-increment: count 48;
+  }
+
+  52.07% {
+    counter-increment: count 49;
+  }
+
+  53.13% {
+    counter-increment: count 50;
+  }
+
+  54.19% {
+    counter-increment: count 51;
+  }
+
+  55.26% {
+    counter-increment: count 52;
+  }
+
+  56.32% {
+    counter-increment: count 53;
+  }
+
+  57.38% {
+    counter-increment: count 54;
+  }
+
+  58.44% {
+    counter-increment: count 55;
+  }
+
+  59.51% {
+    counter-increment: count 56;
+  }
+
+  60.57% {
+    counter-increment: count 57;
+  }
+
+  61.63% {
+    counter-increment: count 58;
+  }
+
+  62.7% {
+    counter-increment: count 59;
+  }
+
+  63.76% {
+    counter-increment: count 60;
+  }
+
+  64.82% {
+    counter-increment: count 61;
+  }
+
+  65.88% {
+    counter-increment: count 62;
+  }
+
+  66.95% {
+    counter-increment: count 63;
+  }
+
+  68.01% {
+    counter-increment: count 64;
+  }
+
+  69.07% {
+    counter-increment: count 65;
+  }
+
+  70.13% {
+    counter-increment: count 66;
+  }
+
+  71.2% {
+    counter-increment: count 67;
+  }
+
+  72.26% {
+    counter-increment: count 68;
+  }
+
+  73.32% {
+    counter-increment: count 69;
+  }
+
+  74.38% {
+    counter-increment: count 70;
+  }
+
+  75.45% {
+    counter-increment: count 71;
+  }
+
+  76.51% {
+    counter-increment: count 72;
+  }
+
+  77.57% {
+    counter-increment: count 73;
+  }
+
+  78.63% {
+    counter-increment: count 74;
+  }
+
+  79.7% {
+    counter-increment: count 75;
+  }
+
+  80.76% {
+    counter-increment: count 76;
+  }
+
+  81.82% {
+    counter-increment: count 77;
+  }
+
+  82.89% {
+    counter-increment: count 78;
+  }
+
+  83.95% {
+    counter-increment: count 79;
+  }
+
+  85.01% {
+    counter-increment: count 80;
+  }
+
+  86.07% {
+    counter-increment: count 81;
+  }
+
+  87.14% {
+    counter-increment: count 82;
+  }
+
+  88.2% {
+    counter-increment: count 83;
+  }
+
+  89.26% {
+    counter-increment: count 84;
+  }
+
+  90.32% {
+    counter-increment: count 85;
+  }
+
+  91.39% {
+    counter-increment: count 86;
+  }
+
+  92.45% {
+    counter-increment: count 87;
+  }
+
+  93.51% {
+    counter-increment: count 88;
+  }
+
+  94.57% {
+    counter-increment: count 89;
+  }
+
+  95.64% {
+    counter-increment: count 90;
+  }
+
+  96.7% {
+    counter-increment: count 91;
+  }
+
+  97.76% {
+    counter-increment: count 92;
+  }
+
+  98.82% {
+    counter-increment: count 93;
+  }
+
+  100% {
+    counter-increment: count 94.106;
+  }
+}
+
+/* the line-bar animation */
+@keyframes line-bar {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: calc(100% - 4rem);
+  }
+}
+
+/* chart animations */
+@keyframes lesan {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 0.12%;
+  }
+}
+
+@keyframes prisma-postgres {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 1.64%;
+  }
+}
+
+@keyframes prisma-postgres-graphql {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 2%;
+  }
+}
+
+@keyframes mongoose-no-sort {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 6%;
+  }
+}
+
+@keyframes mongoose-sort {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: calc(100% - 4rem);
+  }
+}
+
+
+body {
+  background-color: hsl(226, 23%, 11%);
+  color: bisque;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.animation-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.animation-item {
+  display: flex;
+}
+
+.animation-item .title {
+  flex: 1.5;
+}
+
+.animation-item .details {
+  flex: 9;
+  position: relative;
+}
+
+.animation-item .details .chart {
+  display: inline-block;
+  height: 1rem;
+  background-color: gainsboro;
+}
+
+.animation-item.lesan .details .chart {
+  width: 0.12%;
+  animation: lesan 130ms linear forwards;
+}
+
+.animation-item.prisma-postgres .details .chart {
+  width: 1.64%;
+  animation: prisma-postgres 1649ms linear forwards;
+}
+
+.animation-item.prisma-postgres-graphql .details .chart {
+  width: 2%;
+  animation: prisma-postgres-graphql 1973ms linear forwards;
+}
+
+.animation-item.mongoose-no-sort .details .chart {
+  width: 6%;
+  animation: mongoose-no-sort 5896ms linear forwards;
+}
+
+.animation-item.mongoose-sort .details {
+  position: relative;
+}
+
+.animation-item.mongoose-sort .details .chart {
+  width: calc(100% - 4rem);
+  animation: mongoose-sort 94106ms linear forwards;
+}
+
+.animation-item.mongoose-sort .details .line {
+  position: absolute;
+  left: 0;
+  bottom: 0.4rem;
+  width: 1px;
+  height: 7rem;
+  background-color: bisque;
+  animation: line-bar 94106ms linear forwards;
+}
+
+.animation-item.mongoose-sort .details .line::after {
+  position: absolute;
+  bottom: 7rem;
+  left: 0;
+  content: "94.106";
+  content: counter(count);
+  animation: line-bar 94106ms linear forwards;
+  animation: counter 94106ms linear forwards;
+}
