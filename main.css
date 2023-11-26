@@ -529,7 +529,6 @@ body {
   position: absolute;
   bottom: 7rem;
   left: 0;
-  content: "94.106";
   content: counter(count);
   animation: line-bar 94106ms linear forwards;
   animation: counter 94106ms linear forwards;
