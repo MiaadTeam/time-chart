@@ -3,389 +3,483 @@
 *::after {
   box-sizing: border-box;
 }
+:root {
+  --background-color: #fff;
+  --chart--background-color: #fec84b;
+}
 
-/* The animation code */
+body {
+  background-color: var(--background-color);
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.animation-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.animation-item {
+  display: flex;
+}
+
+.animation-item .title {
+  flex: 2;
+}
+
+.animation-item .details {
+  flex: 9;
+  position: relative;
+}
+
+.animation-item .details .chart {
+  display: inline-block;
+  height: 100%;
+  background-color: var(--chart--background-color);
+}
+.animation-item .details .time {
+  transform: translateX(10%);
+}
+
+.animation-item.lesan .details .chart {
+  width: 0.12%;
+  animation: lesan 130ms linear forwards;
+}
+
+.animation-item.prisma-postgres .details .chart {
+  width: 1.64%;
+  animation: prisma-postgres 1649ms linear forwards;
+}
+
+.animation-item.prisma-postgres-graphql .details .chart {
+  width: 2%;
+  animation: prisma-postgres-graphql 1973ms linear forwards;
+}
+.animation-item.prisma-postgres-graphql .details .time {
+  flex-shrink: 0;
+}
+
+.animation-item.mongoose-no-sort .details .chart {
+  width: 6%;
+  animation: mongoose-no-sort 5896ms linear forwards;
+}
+
+.animation-item.mongoose-sort .details {
+  position: relative;
+  display: flex;
+}
+
+.animation-item.mongoose-sort .details .chart {
+  width: calc(100% - 4rem);
+  animation: mongoose-sort 94106ms linear forwards;
+}
+
+.animation-item.mongoose-sort .details .line {
+  position: absolute;
+  transform: translateX(-100%);
+  bottom: 0;
+  width: 1px;
+  height: 8rem;
+  background-color: var(--chart--background-color);
+  animation: line-bar 94106ms linear forwards;
+}
+
+.animation-item.mongoose-sort .details .line::after {
+  position: absolute;
+  top: 0;
+  transform: translateY(-100%);
+  left: -0.4rem;
+  content: counter(count) "s";
+  animation: line-bar 94106ms linear forwards;
+  animation: counter 94106ms linear forwards;
+}
 
 /* the counter animation */
 @keyframes counter {
   0% {
-    counter-increment: count 0;
+    content: "0s";
   }
 
   1.06% {
-    counter-increment: count 1;
+    content: "1s";
   }
 
   2.13% {
-    counter-increment: count 2;
+    content: "2s";
   }
 
   3.19% {
-    counter-increment: count 3;
+    content: "3s";
   }
 
   4.25% {
-    counter-increment: count 4;
+    content: "4s";
   }
 
   5.31% {
-    counter-increment: count 5;
+    content: "5s";
   }
 
   6.38% {
-    counter-increment: count 6;
+    content: "6s";
   }
 
   7.44% {
-    counter-increment: count 7;
+    content: "7s";
   }
 
   8.5% {
-    counter-increment: count 8;
+    content: "8s";
   }
 
   9.56% {
-    counter-increment: count 9;
+    content: "9s";
   }
 
   10.63% {
-    counter-increment: count 10;
+    content: "10s";
   }
 
   11.69% {
-    counter-increment: count 11;
+    content: "11s";
   }
 
   12.75% {
-    counter-increment: count 12;
+    content: "12s";
   }
 
   13.81% {
-    counter-increment: count 13;
+    content: "13s";
   }
 
   14.88% {
-    counter-increment: count 14;
+    content: "14s";
   }
 
   15.94% {
-    counter-increment: count 15;
+    content: "15s";
   }
 
   17% {
-    counter-increment: count 16;
+    content: "16s";
   }
 
   18.06% {
-    counter-increment: count 17;
+    content: "17s";
   }
 
   19.13% {
-    counter-increment: count 18;
+    content: "18s";
   }
 
   20.19% {
-    counter-increment: count 19;
+    content: "19s";
   }
 
   21.25% {
-    counter-increment: count 20;
+    content: "20s";
   }
 
   22.32% {
-    counter-increment: count 21;
+    content: "21s";
   }
 
   23.38% {
-    counter-increment: count 22;
+    content: "22s";
   }
 
   24.44% {
-    counter-increment: count 23;
+    content: "23s";
   }
 
   25.5% {
-    counter-increment: count 24;
+    content: "24s";
   }
 
   26.57% {
-    counter-increment: count 25;
+    content: "25s";
   }
 
   27.63% {
-    counter-increment: count 26;
+    content: "26s";
   }
 
   28.69% {
-    counter-increment: count 27;
+    content: "27s";
   }
 
   29.75% {
-    counter-increment: count 28;
+    content: "28s";
   }
 
   30.82% {
-    counter-increment: count 29;
+    content: "29s";
   }
 
   31.88% {
-    counter-increment: count 30;
+    content: "30s";
   }
 
   32.94% {
-    counter-increment: count 31;
+    content: "31s";
   }
 
   34% {
-    counter-increment: count 32;
+    content: "32s";
   }
 
   35.07% {
-    counter-increment: count 33;
+    content: "33s";
   }
 
   36.13% {
-    counter-increment: count 34;
+    content: "34s";
   }
 
   37.19% {
-    counter-increment: count 35;
+    content: "35s";
   }
 
   38.25% {
-    counter-increment: count 36;
+    content: "36s";
   }
 
   39.32% {
-    counter-increment: count 37;
+    content: "37s";
   }
 
   40.38% {
-    counter-increment: count 38;
+    content: "38s";
   }
 
   41.44% {
-    counter-increment: count 39;
+    content: "39s";
   }
 
   42.51% {
-    counter-increment: count 40;
+    content: "40s";
   }
 
   43.57% {
-    counter-increment: count 41;
+    content: "41s";
   }
 
   44.63% {
-    counter-increment: count 42;
+    content: "42s";
   }
 
   45.69% {
-    counter-increment: count 43;
+    content: "43s";
   }
 
   46.76% {
-    counter-increment: count 44;
+    content: "44s";
   }
 
   47.82% {
-    counter-increment: count 45;
+    content: "45s";
   }
 
   48.88% {
-    counter-increment: count 46;
+    content: "46s";
   }
 
   49.94% {
-    counter-increment: count 47;
+    content: "47s";
   }
 
   51.01% {
-    counter-increment: count 48;
+    content: "48s";
   }
 
   52.07% {
-    counter-increment: count 49;
+    content: "49s";
   }
 
   53.13% {
-    counter-increment: count 50;
+    content: "50s";
   }
 
   54.19% {
-    counter-increment: count 51;
+    content: "51s";
   }
 
   55.26% {
-    counter-increment: count 52;
+    content: "52s";
   }
 
   56.32% {
-    counter-increment: count 53;
+    content: "53s";
   }
 
   57.38% {
-    counter-increment: count 54;
+    content: "54s";
   }
 
   58.44% {
-    counter-increment: count 55;
+    content: "55s";
   }
 
   59.51% {
-    counter-increment: count 56;
+    content: "56s";
   }
 
   60.57% {
-    counter-increment: count 57;
+    content: "57s";
   }
 
   61.63% {
-    counter-increment: count 58;
+    content: "58s";
   }
 
   62.7% {
-    counter-increment: count 59;
+    content: "59s";
   }
 
   63.76% {
-    counter-increment: count 60;
+    content: "60s";
   }
 
   64.82% {
-    counter-increment: count 61;
+    content: "61s";
   }
 
   65.88% {
-    counter-increment: count 62;
+    content: "62s";
   }
 
   66.95% {
-    counter-increment: count 63;
+    content: "63s";
   }
 
   68.01% {
-    counter-increment: count 64;
+    content: "64s";
   }
 
   69.07% {
-    counter-increment: count 65;
+    content: "65s";
   }
 
   70.13% {
-    counter-increment: count 66;
+    content: "66s";
   }
 
   71.2% {
-    counter-increment: count 67;
+    content: "67s";
   }
 
   72.26% {
-    counter-increment: count 68;
+    content: "68s";
   }
 
   73.32% {
-    counter-increment: count 69;
+    content: "69s";
   }
 
   74.38% {
-    counter-increment: count 70;
+    content: "70s";
   }
 
   75.45% {
-    counter-increment: count 71;
+    content: "71s";
   }
 
   76.51% {
-    counter-increment: count 72;
+    content: "72s";
   }
 
   77.57% {
-    counter-increment: count 73;
+    content: "73s";
   }
 
   78.63% {
-    counter-increment: count 74;
+    content: "74s";
   }
 
   79.7% {
-    counter-increment: count 75;
+    content: "75s";
   }
 
   80.76% {
-    counter-increment: count 76;
+    content: "76s";
   }
 
   81.82% {
-    counter-increment: count 77;
+    content: "77s";
   }
 
   82.89% {
-    counter-increment: count 78;
+    content: "78s";
   }
 
   83.95% {
-    counter-increment: count 79;
+    content: "79s";
   }
 
   85.01% {
-    counter-increment: count 80;
+    content: "80s";
   }
 
   86.07% {
-    counter-increment: count 81;
+    content: "81s";
   }
 
   87.14% {
-    counter-increment: count 82;
+    content: "82s";
   }
 
   88.2% {
-    counter-increment: count 83;
+    content: "83s";
   }
 
   89.26% {
-    counter-increment: count 84;
+    content: "84s";
   }
 
   90.32% {
-    counter-increment: count 85;
+    content: "85s";
   }
 
   91.39% {
-    counter-increment: count 86;
+    content: "86s";
   }
 
   92.45% {
-    counter-increment: count 87;
+    content: "87s";
   }
 
   93.51% {
-    counter-increment: count 88;
+    content: "88s";
   }
 
   94.57% {
-    counter-increment: count 89;
+    content: "89s";
   }
 
   95.64% {
-    counter-increment: count 90;
+    content: "90s";
   }
 
   96.7% {
-    counter-increment: count 91;
+    content: "91s";
   }
 
   97.76% {
-    counter-increment: count 92;
+    content: "92s";
   }
 
   98.82% {
-    counter-increment: count 93;
+    content: "93s";
   }
 
   100% {
-    counter-increment: count 94.106;
+    content: "94.106s";
   }
 }
 
@@ -449,87 +543,4 @@
   to {
     width: calc(100% - 4rem);
   }
-}
-
-
-body {
-  background-color: hsl(226, 23%, 11%);
-  color: bisque;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
-.animation-container {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-}
-
-.animation-item {
-  display: flex;
-}
-
-.animation-item .title {
-  flex: 1.5;
-}
-
-.animation-item .details {
-  flex: 9;
-  position: relative;
-}
-
-.animation-item .details .chart {
-  display: inline-block;
-  height: 1rem;
-  background-color: gainsboro;
-}
-
-.animation-item.lesan .details .chart {
-  width: 0.12%;
-  animation: lesan 130ms linear forwards;
-}
-
-.animation-item.prisma-postgres .details .chart {
-  width: 1.64%;
-  animation: prisma-postgres 1649ms linear forwards;
-}
-
-.animation-item.prisma-postgres-graphql .details .chart {
-  width: 2%;
-  animation: prisma-postgres-graphql 1973ms linear forwards;
-}
-
-.animation-item.mongoose-no-sort .details .chart {
-  width: 6%;
-  animation: mongoose-no-sort 5896ms linear forwards;
-}
-
-.animation-item.mongoose-sort .details {
-  position: relative;
-}
-
-.animation-item.mongoose-sort .details .chart {
-  width: calc(100% - 4rem);
-  animation: mongoose-sort 94106ms linear forwards;
-}
-
-.animation-item.mongoose-sort .details .line {
-  position: absolute;
-  left: 0;
-  bottom: 0.4rem;
-  width: 1px;
-  height: 7rem;
-  background-color: bisque;
-  animation: line-bar 94106ms linear forwards;
-}
-
-.animation-item.mongoose-sort .details .line::after {
-  position: absolute;
-  bottom: 7rem;
-  left: 0;
-  content: counter(count);
-  animation: line-bar 94106ms linear forwards;
-  animation: counter 94106ms linear forwards;
 }
