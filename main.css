@@ -3,6 +3,7 @@
 *::after {
   box-sizing: border-box;
 }
+
 :root {
   --background-color: #fff;
   --chart--background-color: #fec84b;
@@ -18,11 +19,18 @@ body {
   overflow: hidden;
 }
 
-.animation-container {
+.main-container {
   width: 90%;
+  height: 20rem;
+}
+
+.animation-container {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  font-size: 1.25rem !important;
+  margin-bottom: 4rem;
+  color: chocolate;
 }
 
 .animation-item {
@@ -30,30 +38,58 @@ body {
 }
 
 .animation-item .title {
-  flex: 2;
+  width: 16rem;
 }
 
 .animation-item .details {
-  flex: 9;
+  width: calc(100% - 16rem);
   position: relative;
 }
 
 .animation-item .details .chart {
   display: inline-block;
   height: 100%;
-  background-color: var(--chart--background-color);
+  background-color: #ffb454;
 }
+
 .animation-item .details .time {
-  transform: translateX(10%);
+  position: absolute;
+  left: 0;
+}
+
+.animation-item.lesan {
+  font-size: 1.4rem;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.animation-item.lesan .details .time {
+  left: 1%;
+}
+
+.animation-item.prisma-postgres .details .time {
+  animation: prisma-postgres-time 1649ms linear forwards;
+}
+
+.animation-item.prisma-postgres-graphql .details .time {
+  animation: prisma-postgres-graphql-time 1973ms linear forwards;
+}
+
+.animation-item.mongoose-no-sort .details .time {
+  animation: mongoose-no-sort-time 5896ms linear forwards;
+}
+
+.animation-item.mongoose-sort .details .time {
+  animation: mongoose-sort-time 94106ms linear forwards;
 }
 
 .animation-item.lesan .details .chart {
-  width: 0.12%;
+  width: 0.130%;
   animation: lesan 130ms linear forwards;
 }
 
 .animation-item.prisma-postgres .details .chart {
-  width: 1.64%;
+  width: 1.78%;
   animation: prisma-postgres 1649ms linear forwards;
 }
 
@@ -61,12 +97,9 @@ body {
   width: 2%;
   animation: prisma-postgres-graphql 1973ms linear forwards;
 }
-.animation-item.prisma-postgres-graphql .details .time {
-  flex-shrink: 0;
-}
 
 .animation-item.mongoose-no-sort .details .chart {
-  width: 6%;
+  width: 6.2%;
   animation: mongoose-no-sort 5896ms linear forwards;
 }
 
@@ -76,7 +109,7 @@ body {
 }
 
 .animation-item.mongoose-sort .details .chart {
-  width: calc(100% - 4rem);
+  width: 100%;
   animation: mongoose-sort 94106ms linear forwards;
 }
 
@@ -85,8 +118,8 @@ body {
   transform: translateX(-100%);
   bottom: 0;
   width: 1px;
-  height: 8rem;
-  background-color: var(--chart--background-color);
+  height: 12rem;
+  background-color: #ffb454;
   animation: line-bar 94106ms linear forwards;
 }
 
@@ -98,6 +131,46 @@ body {
   content: counter(count) "s";
   animation: line-bar 94106ms linear forwards;
   animation: counter 94106ms linear forwards;
+}
+
+@keyframes prisma-postgres-time {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 2.4%;
+  }
+}
+
+@keyframes prisma-postgres-graphql-time {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 2.7%;
+  }
+}
+
+@keyframes mongoose-no-sort-time {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 7%;
+  }
+}
+
+@keyframes mongoose-sort-time {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 100%;
+  }
 }
 
 /* the counter animation */
@@ -490,7 +563,7 @@ body {
   }
 
   to {
-    left: calc(100% - 4rem);
+    left: 100%;
   }
 }
 
@@ -501,7 +574,7 @@ body {
   }
 
   to {
-    width: 0.12%;
+    width: 0.130%;
   }
 }
 
@@ -511,7 +584,7 @@ body {
   }
 
   to {
-    width: 1.64%;
+    width: 1.78%;
   }
 }
 
@@ -521,7 +594,7 @@ body {
   }
 
   to {
-    width: 2%;
+    width: 2.1%;
   }
 }
 
@@ -531,7 +604,7 @@ body {
   }
 
   to {
-    width: 6%;
+    width: 6.2%;
   }
 }
 
@@ -541,6 +614,6 @@ body {
   }
 
   to {
-    width: calc(100% - 4rem);
+    width: 100%;
   }
 }
